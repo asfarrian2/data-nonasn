@@ -53,7 +53,7 @@
         <br>
         <div class="col-md-4">
             <a href="/sk/create" class="btn btn-primary btn-sm" id="btntambahkoderekening">
-              <i class="fa fa-plus"></i>Tambah
+              <i class="fa fa-plus"></i> Tambah
             </a>
         </div>
 
@@ -64,7 +64,7 @@
             <div class="row">
                 <div class="col-sm-12">
                   <div class="card-box table-responsive">
-                      <table id="datatable" class="table table-striped table-bordered" width="100%">
+                      <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" width="100%">
                         <thead>
                             <tr>
                             <th class="text-center">No.</th>
