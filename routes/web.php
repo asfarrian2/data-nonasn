@@ -18,7 +18,7 @@ use Spatie\Permission\Models\Role;
 // });
 
 //Proses Login
-Route::get('/', [LoginController::class, 'index']);
+Route::get('/', [LoginController::class, 'index'])->name('login');
 Route::post('/proses_login', [LoginController::class, 'login_proses']);
 Route::get('/proseslogout', [LoginController::class, 'logout']);
 
@@ -29,7 +29,7 @@ Route::get('/beranda', [BerandaController::class, 'view']);
 Route::get('/sk/create', [BerandaController::class, 'create']);
 Route::post('/sk/store', [BerandaController::class, 'store']);
 Route::get('/sk/edit/{id_sk}', [BerandaController::class, 'edit']);
-Route::post('/sk/update/', [BerandaController::class, 'update']);
+Route::post('/sk/update', [BerandaController::class, 'update']);
 Route::get('/sk/hapus/{id_sk}', [BerandaController::class, 'hapus']);
 
 
