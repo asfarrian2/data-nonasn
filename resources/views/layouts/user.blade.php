@@ -36,7 +36,7 @@
 
     <!-- Custom Theme Style -->
     <link href="/gentella/build/css/custom.min.css" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="/wp/img/logoutama.png">
+    <link rel="icon" type="image/x-icon" href="/logo/kalsel.png">
   </head>
 
   <body class="nav-md">
