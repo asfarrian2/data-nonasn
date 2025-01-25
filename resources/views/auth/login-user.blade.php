@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Data Non ASN Balatkop</title>
+    <meta name="description" content="Data NON-ASN Balai Pelatihan Koperasi dan Usaha Kecil Prov. Kalsel">
+    <meta name="keywords" content="Pastikan Data Biodata/Profil Diri dan Input Data SK (Surat Keputusan) dengan Benar" />
 
     <!-- Bootstrap -->
     <link href="/gentella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
