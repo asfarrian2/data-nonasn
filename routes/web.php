@@ -29,7 +29,7 @@ Route::get('/beranda', [BerandaController::class, 'view']);
 Route::get('/sk/create', [BerandaController::class, 'create']);
 Route::post('/sk/store', [BerandaController::class, 'store']);
 Route::get('/sk/edit/{id_sk}', [BerandaController::class, 'edit']);
-Route::post('/sk/update', [BerandaController::class, 'update']);
+Route::post('/sk/rubah', [BerandaController::class, 'update']);
 Route::get('/sk/hapus/{id_sk}', [BerandaController::class, 'hapus']);
 
 

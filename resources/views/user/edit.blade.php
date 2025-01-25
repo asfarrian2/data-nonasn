@@ -36,7 +36,7 @@
         </div>
 		<div class="x_content">
 		    <br>
-			<form action="/sk/update" method="POST" data-parsley-validate class="form-horizontal form-label-left">
+			<form action="/sk/rubah" method="POST" data-parsley-validate class="form-horizontal form-label-left">
                 @csrf
                 <input type="text" hidden name="id_sk" value="{{ $sk->id_sk }}" id=""  class="form-control ">
                     <div class="item form-group">
