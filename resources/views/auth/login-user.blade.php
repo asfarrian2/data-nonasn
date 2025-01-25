@@ -63,7 +63,7 @@
 
                 <div>
                   <h1><i class="fa fa-user"></i> DATA NON-ASN</h1>
-                  <p>©2025 All Rights Reserved. Balai Pelatihan Koperasi <br> dan Usaha Kecil <br> Prov. Kalimantan Selatan</p>
+                  <p>©2025 All Rights Reserved. Balai Pelatihan Koperasi <br> dan Usaha Kecil Prov. Kalimantan Selatan</p>
                 </div>
               </div>
             </form>
