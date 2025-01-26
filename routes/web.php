@@ -52,6 +52,8 @@ Route::middleware('auth:user')->group(function () {
 //home
 Route::get('/panel/home', [HomeController::class, 'view']);
 
+Route::get('/panel/cetak', [HomeController::class, 'cetak']);
+
 //data non-asn
 Route::get('/panel/data-nonasn/view', [NonasnController::class, 'view']);
 Route::get('/panel/data-nonasn/create', [NonasnController::class, 'create']);

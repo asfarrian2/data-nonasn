@@ -59,46 +59,34 @@
             <div class="row">
                 <div class="col-sm-12">
                   <div class="card-box table-responsive">
-                      <table id="datatable" class="table table-striped table-bordered" width="100%">
+                      <table id="" class="table" width="100%">
                         <thead>
                             <tr>
                             <th class="text-center">No.</th>
                             <th class="text-center">Nama</th>
-                            <th class="text-center">Total SK</th>
-                            <th class="text-center">Keterangan</th>
+                            <th class="text-center">NIK</th>
+                            <th class="text-center">Nomor SK</th>
+                            <th class="text-center">Tanggal</th>
+                            <th class="text-center">Jabatan</th>
+                            <th class="text-center">Penempatan / Seksi</th>
                             </tr>
                         </thead>
                         <tbody>
-                        @php
-                            $total = 0;
-                        @endphp
-                            @forelse ($pegawai as $d)
+                            @foreach ($pegawai as $d)
                             <tr>
-                            <td class="text-center">{{ $loop->iteration }}</td>
-                            @if ($d->total > '0')
-                            <td>{{ $d->nama }}</td>
+                            <td rowspan="{{$d->total + 1}}">{{ $loop->iteration }}</td>
+                            <td rowspan="{{$d->total + 1}}">{{ $d->nama }}</td>
+                            <td rowspan="{{$d->total + 1}}">{{ $d->nik }}</td>
+                            @foreach ($sk as $s)
+                            @if ($d->id_nonasn == $s->id_nonasn)
+                            <td>{{$s->nomor}}</td>
+                            <td>{{date('d-m-Y', strtotime($s->tgl_sk))}}</td>
+                            <td>{{$s->jabatan_sk}}</td>
+                            <td>{{$s->penempatan}}</td>
                             @endif
-                            @if ($d->total == '0')
-                            <td style="color:red">{{ $d->nama }}</td>
-                            @endif
-                            <td>{{ $d->total }}</td>
-                            @if ($d->total == '0')
-                            <td  style="color:red"><b>Belum Melaporkan</b></td>
-                             @endif
-                             @if ($d->total > '0')
-                            <td >Sudah Melaporkan</td>
-                             @endif
                             </tr>
-                            @empty
-                                {{-- jika data tidak ada, tampilkan pesan data tidak tersedia --}}
-                            <tr>
-                                <td colspan="8">
-                                    <div class="d-flex justify-content-center align-items-center">
-                                       <p> <i class="fa fa-exclamation"></i> Tidak ada data tersedia.</p>
-                                    </div>
-                                </td>
-                            </tr>
-                            @endforelse
+                            @endforeach
+                            @endforeach
                       </tbody>
                     </table>
                   </div>

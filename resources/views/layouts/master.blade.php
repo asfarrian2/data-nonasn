@@ -66,7 +66,7 @@
                 <li><a><i class="fa fa-book"></i> LAPORAN<span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
                     <li><a href="chartjs.html">Data Non-ASN</a></li>
-                    <li><a href="chartjs2.html">Daftar SK</a></li>
+                    <li><a href="/panel/cetak">Daftar SK</a></li>
                   </ul>
                 </li>
               </ul>
