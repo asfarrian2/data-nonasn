@@ -53,6 +53,7 @@ Route::middleware('auth:user')->group(function () {
 Route::get('/panel/home', [HomeController::class, 'view']);
 
 Route::get('/panel/cetak', [HomeController::class, 'cetak']);
+Route::get('/panel/excel', [HomeController::class, 'excel']);
 
 //data non-asn
 Route::get('/panel/data-nonasn/view', [NonasnController::class, 'view']);

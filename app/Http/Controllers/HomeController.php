@@ -30,7 +30,7 @@ class HomeController extends Controller
 
         $pegawai = DB::table('pegawai')
         ->leftJoin('sk', 'pegawai.id_nonasn', '=', 'sk.id_nonasn')
-        ->select('pegawai.id_nonasn', 'pegawai.nama', 'pegawai.nik', DB::raw('COUNT(sk.id_sk) as total'))
+        ->select('pegawai.id_nonasn', 'pegawai.nama', 'pegawai.pendidikan','pegawai.nik', 'pegawai.jabatan', DB::raw('COUNT(sk.id_sk) as total'))
         ->groupBy('pegawai.id_nonasn')
         ->get();
 
@@ -39,7 +39,28 @@ class HomeController extends Controller
         ->get();
 
 
-        return view('admin.cetak', compact('pegawai', 'sk'));
+        return view('admin.laporan', compact('pegawai', 'sk'));
+
+
+    }
+
+    public function excel(){
+
+        $pegawai = DB::table('pegawai')
+        ->leftJoin('sk', 'pegawai.id_nonasn', '=', 'sk.id_nonasn')
+        ->select('pegawai.id_nonasn', 'pegawai.nama', 'pegawai.pendidikan','pegawai.nik', 'pegawai.jabatan', DB::raw('COUNT(sk.id_sk) as total'))
+        ->groupBy('pegawai.id_nonasn')
+        ->get();
+
+        $sk = DB::table('sk')
+        ->orderBy('id_nonasn', 'DESC')
+        ->get();
+        header("Content-type: application/vnd-ms-excel");
+        // Mendefinisikan nama file ekspor "hasil-export.xls"
+        header("Content-Disposition: attachment; filename=Laporan Penerimaan.xls");
+
+
+        return view('admin.laporan', compact('pegawai', 'sk'));
 
 
     }

@@ -65,8 +65,8 @@
                 <br> <h3>OUTPUT</h3> <br>
                 <li><a><i class="fa fa-book"></i> LAPORAN<span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
-                    <li><a href="chartjs.html">Data Non-ASN</a></li>
-                    <li><a href="/panel/cetak">Daftar SK</a></li>
+                    <li><a href="/panel/cetak">Cetak Laporan</a></li>
+                    <li><a href="/panel/excel">Excel</a></li>
                   </ul>
                 </li>
               </ul>

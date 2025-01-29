@@ -65,6 +65,8 @@
                             <th class="text-center">No.</th>
                             <th class="text-center">Nama</th>
                             <th class="text-center">NIK</th>
+                            <th class="text-center">Pendidikan</th>
+                            <th class="text-center">Jabatan</th>
                             <th class="text-center">Nomor SK</th>
                             <th class="text-center">Tanggal</th>
                             <th class="text-center">Jabatan</th>
@@ -77,6 +79,8 @@
                             <td rowspan="{{$d->total + 1}}">{{ $loop->iteration }}</td>
                             <td rowspan="{{$d->total + 1}}">{{ $d->nama }}</td>
                             <td rowspan="{{$d->total + 1}}">{{ $d->nik }}</td>
+                            <td rowspan="{{$d->total + 1}}">{{ $d->pendidikan }}</td>
+                            <td rowspan="{{$d->total + 1}}">{{ $d->jabatan }}</td>
                             @foreach ($sk as $s)
                             @if ($d->id_nonasn == $s->id_nonasn)
                             <td>{{$s->nomor}}</td>
