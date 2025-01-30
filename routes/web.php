@@ -17,8 +17,10 @@ use Spatie\Permission\Models\Role;
 //     return view('auth.login-user');
 // });
 
+Route::get('/halamantidakada',[HomeController::class, 'error'])->name('login');
+
 //Proses Login
-Route::get('/', [LoginController::class, 'index'])->name('login');
+Route::get('/', [LoginController::class, 'index']);
 Route::post('/proses_login', [LoginController::class, 'login_proses']);
 Route::get('/proseslogout', [LoginController::class, 'logout']);
 

@@ -12,6 +12,10 @@ use Illuminate\Support\Facades\Hash;
 class HomeController extends Controller
 {
 
+    public function error(){
+        return view('errors.404');
+    }
+
     public function view(){
 
         $pegawai = DB::table('pegawai')
